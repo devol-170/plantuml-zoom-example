@@ -1,3 +1,4 @@
+@startuml AnimationControl1
 state AnimationControl {
     !include Idle.puml
     !include Move.puml
@@ -5,3 +6,4 @@ state AnimationControl {
     Idle --> Move: On Moving
     Move --> Idle: On Idle
 }
+@enduml

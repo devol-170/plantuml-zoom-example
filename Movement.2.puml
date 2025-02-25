@@ -1,3 +1,4 @@
+@startuml Movement2
 state Movement {
     !include Grounded.puml
     !include Airborne.1.puml
@@ -5,3 +6,4 @@ state Movement {
     Grounded --> Airborne: On Airborne
     Grounded --> DoubleJumpEnabled: On Jump
 }
+@enduml

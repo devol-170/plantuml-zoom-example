@@ -27,8 +27,7 @@ non-atomic states: `[stateName].[level].puml`
 3. arrows into a substate only allowed when non-atomic state at least level2, see example   `Grounded --> DoubleJumpEnabled: On Jump` in `Movement.2.puml`
 
 
-
-## Level 0
+## Root Level 0
 ```
 @startuml root
 [*] --> Root
@@ -38,7 +37,7 @@ state Root
 ![](root.0/root.svg)
 
 
-## Level 1
+## Root Level 1
 ```
 @startuml root
 [*] --> Root
@@ -50,9 +49,9 @@ state Root {
 }
 @enduml
 ```
-![](root.1/root.svg)
+![](svg/root/root.svg)
 
-## Level 2
+## Root Level 2
 ```
 @startuml root
 [*] --> Root
@@ -64,9 +63,9 @@ state Root {
 }
 @enduml
 ```
-![](root.2/root.svg)
+![](svg/root/root2.svg)
 
-## Level 3
+## Root Level 3
 ```
 @startuml root
 [*] --> Root
@@ -78,13 +77,29 @@ state Root {
 }
 @enduml
 ```
-![](root.3/root.svg)
+![](svg/root/root3.svg)
+
+## Airborne Level 1
+![](svg/Airborne/Airborne1.svg)
+
+## AnimationControl Level 1
+![](svg/AnimationControl/AnimationControl1.svg)
+
+## Movement Level 1
+![](svg/Movement/Movement1.svg)
+
+## Movement Level 2
+![](svg/Movement/Movement2.svg)
 
 
 ## SVG creation
 ```
-plantuml -tsvg -i root.0.puml -o root.0
-plantuml -tsvg -i root.1.puml -o root.1
-plantuml -tsvg -i root.1.puml -o root.1
-plantuml -tsvg -i root.1.puml -o root.1
+plantuml -tsvg -i root.0.puml -o svg/root
+plantuml -tsvg -i root.1.puml -o svg/root
+plantuml -tsvg -i root.2.puml -o svg/root
+plantuml -tsvg -i root.3.puml -o svg/root
+plantuml -tsvg -i Airborne.1.puml -o svg/Airborne
+plantuml -tsvg -i AnimationControl.1.puml -o svg/AnimationControl
+plantuml -tsvg -i Movement.1.puml -o svg/Movement
+plantuml -tsvg -i Movement.2.puml -o svg/Movement
 ```

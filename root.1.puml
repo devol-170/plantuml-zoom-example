@@ -1,4 +1,4 @@
-@startuml root
+@startuml root1
 [*] --> Root
 
 state Root {

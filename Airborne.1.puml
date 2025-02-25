@@ -1,3 +1,4 @@
+@startuml Airborne1
 state Airborne {
         [*] --> CoyoteJumpEnabled
         !include CoyoteJumpEnabled.puml
@@ -7,4 +8,5 @@ state Airborne {
         CoyoteJumpEnabled --> DoubleJumpEnabled: On Jump
         DoubleJumpEnabled --> CannotJump: On Jump
         CoyoteJumpEnabled --> CannotJump: after 0.5s
-    }
+}
+@enduml
