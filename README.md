@@ -22,8 +22,7 @@ non-atomic states: `[stateName].[level].puml`
 
 
 ## General approach
-1. non-atomic states [stateName].n.puml includes [subState].[n-1].puml if available.
-1.1. else highest available see root.3 -> AnimationControl.1
+1. non-atomic states `[stateName].n.puml` includes `[subState].[n-1].puml` if available. Otherwise include highest available, for example: `!include AnimationControl.1.puml` in  `root.3`
 2. no `!includes` in `[stateName].0` 
 3. arrows into a substate only allowed when non-atomic state at least level2, see example   `Grounded --> DoubleJumpEnabled: On Jump` in `Movement.2.puml`
 
