@@ -1,0 +1,9 @@
+@startuml root
+[*] --> Root
+
+state Root {
+    !include Movement.0.puml
+    ---
+    !include AnimationControl.0.puml
+}
+@enduml

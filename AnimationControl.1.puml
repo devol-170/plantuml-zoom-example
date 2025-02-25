@@ -1,0 +1,7 @@
+state AnimationControl {
+    !include Idle.puml
+    !include Move.puml
+
+    Idle --> Move: On Moving
+    Move --> Idle: On Idle
+}

@@ -1,0 +1,10 @@
+state Airborne {
+        [*] --> CoyoteJumpEnabled
+        !include CoyoteJumpEnabled.puml
+        !include DoubleJumpEnabled.puml
+        !include CannotJump.puml
+
+        CoyoteJumpEnabled --> DoubleJumpEnabled: On Jump
+        DoubleJumpEnabled --> CannotJump: On Jump
+        CoyoteJumpEnabled --> CannotJump: after 0.5s
+    }
