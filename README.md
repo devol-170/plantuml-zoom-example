@@ -34,7 +34,8 @@ non-atomic states: `[stateName].[level].puml`
 state Root 
 @enduml
 ```
-![](root.0/root.svg)
+
+![](svg/root/root.svg)
 
 
 ## Root Level 1
@@ -49,7 +50,7 @@ state Root {
 }
 @enduml
 ```
-![](svg/root/root.svg)
+![](svg/root/root1.svg)
 
 ## Root Level 2
 ```
